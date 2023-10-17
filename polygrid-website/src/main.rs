@@ -40,7 +40,7 @@ async fn axum() -> shuttle_axum::ShuttleAxum {
     let router = Router::new()
         .route("/", get(pages::index))
         .route("/editor", get(pages::editor))
-        .nest_service("/static", ServeDir::new(PathBuf::from("static")))
+        .nest_service("/static", ServeDir::new(PathBuf::from("polygrid-website/static")))
         .fallback(pages::not_found)
         .layer(
             ServiceBuilder::new()
