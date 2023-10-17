@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>polygrid</title>
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>▣</text></svg>">
+
+    <script src="/static/js/htmx.min.js?v=1.9.6"></script>
+    <link rel="stylesheet" href="/static/css/missing.min.css?v=1.1.1" />
+    <link rel="stylesheet" href="/static/css/style.css?v=0.1.0" />
+</head>
+
+<body hx-boost="true">
+    <header class="navbar f-switch" style="margin: 0">
+        <h1 class="heading-1 align-self:start">
+            <a href="/">▣ polygrid</a>
+        </h1>
+    </header>
+
+    <main class="width:100% height:100%">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="text-align:center">
+        <p>Made with ❤️ by <a href="https://plabayo.tech">plabayo</a>.</p>
+    </footer>
+</body>
+
+</html>
