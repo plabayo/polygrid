@@ -1,8 +1,8 @@
 run:
-    cd polygrid-website && cargo shuttle run
+    cargo shuttle run
 
 watch:
-    cd polygrid-website && cargo watch -x "shuttle run" -i Cargo.lock
+    cargo watch -x "shuttle run" -i Cargo.lock
 
 deploy:
     cargo shuttle deploy
