@@ -1,6 +1,6 @@
 [workspace]
 members = [
-  "polygrid-editor",
-  "polygrid-website"
+  "polygrid-app",
+  "polygrid",
 ]
 resolver = "2"
