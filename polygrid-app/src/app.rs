@@ -78,6 +78,13 @@ impl eframe::App for TemplateApp {
                 self.value += 1.0;
             }
 
+            ui.separator();
+
+            ui.add(egui::github_link_file!(
+                "https://github.com/plabayo/polygrid/blob/main/",
+                "Source code."
+            ));
+
             ui.with_layout(egui::Layout::bottom_up(egui::Align::LEFT), |ui| {
                 powered_by_egui_and_eframe(ui);
                 egui::warn_if_debug_build(ui);
