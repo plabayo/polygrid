@@ -2,8 +2,8 @@ var cacheName = 'polygrid-pwa';
 var filesToCache = [
   './',
   './index.html',
-  './polygrid-app-5cd6882c9057d80c.js',
-  './polygrid-app-5cd6882c9057d80c_bg.wasm',
+  './polygrid-app-96448e7df265fb17.js',
+  './polygrid-app-96448e7df265fb17_bg.wasm',
 ];
 
 /* Start the service worker and cache all of the app's content */
