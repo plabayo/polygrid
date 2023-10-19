@@ -1,7 +1,5 @@
 var cacheName = 'polygrid-pwa';
 var filesToCache = [
-  './',
-  './index.html',
   './polygrid-app-{{ POLYGRID_APP_HASH }}.js',
   './polygrid-app-{{ POLYGRID_APP_HASH }}_bg.wasm',
 ];
