@@ -17,7 +17,7 @@ test-docs:
     cargo test --workspace --doc
 
 trunk-build:
-    cd polygrid-app && trunk build
+    cd polygrid-app && trunk build --release
 
 trunk-watch:
     cd polygrid-app && trunk watch
@@ -36,8 +36,11 @@ fix: fmt clippy-fix
 git-push: qa
     git push
 
-shuttle-deploy: qa
-    cargo shuttle deploy --no-test
+shuttle-deploy name="polygrid-website": qa
+    cargo shuttle deploy --name {{name}} --no-test
 
-shuttle-watch:
-    cargo watch -x 'shuttle run' -i 'polygrid-app,Cargo.lock'
+shuttle-deploy-test:
+    just shuttle-deploy "polygrid-website-test"
+
+shuttle-watch name="polygrid-website":
+    cargo watch -x 'shuttle run --name {{name}}' -i 'polygrid-website-app,Cargo.lock'
